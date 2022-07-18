@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:replace=~{layout}>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div layout:fragment="content">
+
+    <!-- Default Table -->
+    <div class="row">
+        <div class="col-lg-6">
+            <a th:href="@{/countryAdd}" class="btn btn-primary">
+                Add New Country
+            </a>
+        </div>
+    <h5 class="card-title">Default Table</h5>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Capital</th>
+            <th scope="col">Code</th>
+            <th scope="col">Nationality</th>
+            <th scope="col">Continent</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="country: ${countries}">
+            <td th:text="${country.description}"></td>
+            <td th:text="${country.capital}"></td>
+            <td th:text="${country.code}"></td>
+            <td th:text="${country.nationality}"></td>
+            <td th:text="${country.continent}"></td>
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-primary" th:href="@{/countries/findById/(id=${country.id})}"><i class="bi bi-pencil-square"></i></a>
+                    <a class="btn btn-success" id="detailsButton" th:href="@{'/countryEdit/'+${country.id}}" ><i class="bx bx-detail"></i></a>
+                    <a class="btn btn-success" id="detailsButton2" th:href="@{/countryEdit2/(${country.id})}" ><i class="bx bx-detail"></i></a>
+                    <a class="btn btn-danger" id="deleteButton" th:href="@{/countries/delete/(id=${country.id})}"
+                       onclick="return confirm('Are you sure you want to delete this record?')"><i class="bx bx-x-circle"></i></a>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- End Default Table  -->
+
+</div>
+
+</body>
+</html>

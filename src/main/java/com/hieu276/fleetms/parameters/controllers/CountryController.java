@@ -32,13 +32,6 @@ public class CountryController {
         return "parameters/countryEdit";
     }
 
-    @GetMapping("/countryEdit2")
-    public String editCountry2(Integer id,Model model){
-        Country country = countryService.findById(id);
-        model.addAttribute("country",country);
-        return "parameters/countryEdit";
-    }
-
     @PostMapping("/countries")
     public String save(Country country){
         countryService.save(country);
@@ -51,5 +44,17 @@ public class CountryController {
         return "redirect:/countries";
     }
 
+    @RequestMapping(value="/countries/update/{id}",method = {RequestMethod.PUT, RequestMethod.GET} )
+    public String update(Country country){
+        countryService.save(country);
+        return "redirect:/countries";
+    }
+
+    @GetMapping("/countryDetails/{id}")
+    public String detailsCountry(@PathVariable Integer id,Model model){
+        Country country = countryService.findById(id);
+        model.addAttribute("country",country);
+        return "parameters/countryDetails";
+    }
 
 }

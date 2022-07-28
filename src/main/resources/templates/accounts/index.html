@@ -8,79 +8,90 @@
 </head>
 <body>
     <div layout:fragment="content">
-        <div class="container">
+        <section class="wrapper">
             <div class="row">
-                <div class="col">
-                    <div class="card" style="width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Countries</h5>
-                            <p class="card-text">This is management country card</p>
-                            <a th:href="@{/countries}" class="btn btn-primary">Manage</a>
-                        </div>
-                    </div>
+                <div class="col-lg-12">
+                    <h3 class="page-header"><i class="fa fa fa-bars"></i> Accounts Home</h3>
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="/index">Home</a></li>
+                        <li><i class="fa fa-bars"></i><a href="/accounts">Accounts</a></li>
+                        <li><i class="fa fa-square-o"></i>Accounts Home</li>
+                    </ol>
                 </div>
-                <div class="col">
-                    <div class="card" style="width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Modules</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a th:href="@{/modules}" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <section class="panel">
+                        <div class="panel-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3><b>Transactions</b></h3></h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="/accounts/transactions" class="btn btn-primary">Manage Transactions</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
-                <div class="col">
-                    <div class="card" style="width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Location</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a th:href="@{/locations}" class="btn btn-primary">Go somewhere</a>
+                <div class="col-lg-4">
+                    <section class="panel">
+                        <div class="panel-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3><b>Transaction Types</b></h3></h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="/accounts/transactionTypes" class="btn btn-primary">Manage Transaction
+                                        Types</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
+                </div>
+                <div class="col-lg-4">
+                    <section class="panel">
+                        <div class="panel-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3><b>Transaction Status</b></h3></h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="/accounts/transactionStatuses" class="btn btn-primary">Manage Transaction
+                                        Status</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col">
-                    <div class="card" style="width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Contacts</h5>
-                            <p class="card-text">This is management country card</p>
-                            <a th:href="@{/contacts}" class="btn btn-primary">Manage</a>
+                <div class="col-lg-4">
+                    <section class="panel">
+                        <div class="panel-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3><b>Invoice</b></h3></h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="/accounts/invoices" class="btn btn-primary">Manage Invoice</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
-                <div class="col">
-                    <div class="card" style="width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Suppliers</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a th:href="@{/suppliers}" class="btn btn-primary">Go somewhere</a>
+                <div class="col-lg-4">
+                    <section class="panel">
+                        <div class="panel-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3><b>Invoice Status</b></h3></h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="/accounts/invoiceStatuses" class="btn btn-primary">Manage Invoice Status</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card" style="width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Clients</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a th:href="@{/clients}" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="card" style="width: 22rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">States</h5>
-                            <p class="card-text">This is management country card</p>
-                            <a th:href="@{/states}" class="btn btn-primary">Manage</a>
-                        </div>
-                    </div>
+                    </section>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </body>
 </html>

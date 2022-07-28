@@ -46,9 +46,17 @@ public class CountryService {
 //        return countryRepository.findAll(pageable);
 //    }
 
-    public List<Country> findAllWithSort(String field, String direction) {
+    public Page<Country> findAllWithSort(String field, String direction,int pageNum) {
         Sort sort = direction.equalsIgnoreCase(Sort.Direction.ASC.name()) ?
                 Sort.by(field).ascending() : Sort.by(field).descending();
-        return countryRepository.findAll(sort);
+        Pageable pageable = PageRequest.of(pageNum - 1,5,sort);
+        return countryRepository.findAll(pageable);
     }
+
+    public Page<Country> findPage(int pageNumber){
+        Pageable pageable = PageRequest.of(pageNumber - 1,5);
+        return countryRepository.findAll(pageable);
+    }
+
+
 }
